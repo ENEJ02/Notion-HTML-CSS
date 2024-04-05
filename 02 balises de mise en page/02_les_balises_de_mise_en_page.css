@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(230,224,224);
+    width: 50%;
+    border: 5px solid orange;
+    margin: 0 auto;
+    
+}
+
+header {
+    background-color: brown;
+    color: white;
+    height: 200px;
+}
+
+nav a {
+    color: blanchedalmond;
+}
+
+header,
+main,
+footer {
+    padding: 20px;
+}
+
+

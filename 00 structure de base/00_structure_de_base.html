@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- ceci est un commentaire -->
+<!-- 
+    Doctype est la première balise obligatoire dans une page html: c'est une instruction au navigateur web sur la version du langage balisage dont la page est écrite et elle designe le type de document pour le navigateur, ici:.html  -->
+
+<html lang="fr">
+    <!-- 
+        La balise html désigne le début de la page-> balise obligatoire: c'est elle qui va recueillir les deux principaux éléments de la hiérarchie: la balise <head> et <body> et englobe tous les éléments d'une page web. L'attribut "lang" dont la valeur est "fr" désigne la langue utilisée pour le contenu de la page: le français utilisé côté utilisateur -> important pour l'accessibilité.
+         Lorsque l'on donne une valeur "zxx": une utilise cette abbreviation lorsque l'on est essentiellement en "lorem ipsum"-->    
+
+<head>
+    <!--
+         Elément d'en-tête, la balise head regroupe toutes les méta-informations et contient les paramètres d'en-tête de la page html qui sont, pour la plupart invisibles pour l'internaute  -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+        L'encodage des caractéres pour afficher les caractéres spéciaux tels que les accents
+    -->
+    <!-- 
+        les meta sont les balises qui fournissenent des méta-données au navigateur et moteur de recherche c-à-d  des informations au sujet de la page en question
+        Il existe de très nombreuses balises méta, les plus utilisés :
+        - La balise meta  + l'attribut charset : permet l'encodage des caractéres => il est recommandé de la placer au tout début de la balise head, surtout avant la balise title, car cette derniére peut déjà être concerné par l'encodage des carctéres. 
+        une seule valeur cependant devrait être utilisée aujord'hui autant que possible : utf-8. cette méthode d'encodage permet d'afficher sans aucun problème pratiquement tout les symboles de toutes les langues de notre planètes ! c'est poiur cela que j'ai indiqué utf-8 dans cette balise
+
+    -->
+    <title>Ma première page HTML - structure de base de la page</title>
+      <!-- 
+        le titre de la page, cette balise est obligatoire, le contenu de cet élément n'apparait pas directement dans la page mais sur l'onglet, il est utilisé : 
+        - par le navigateur web , dans le titre de la fenêtre, les onglets, comme titres de marque-pages (favoris)
+        - par les moteurs de recherche et divers outils, comme titre de résultat de recherche
+    -->
+
+
+    <style>
+        body{
+            background-color:pink;
+        }
+    </style>
+
+    <link rel="stylesheet" href="/00_structure_de_base.css">
+
+
+</head>
+<body>
+
+    <h1>Ma première page</h1>
+    <p style="background-color: rgb(0, 174, 255);">Je suis un paragraphe</p>
+    <!-- style en ligne avec l'attribut "style" -->
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="les formulaires en Html">
+    <meta name="author" content="yacine djediden">
+    <title>Les formulaires en Html</title>
+
+</head>
+
+<body>
+    <style>
+        input[type="email"] {
+            color: red;
+        }
+    </style>
+
+    <h1>Mon premier formulaire Html</h1>
+
+    <form action="#" method="post">
+        <fieldset>
+            <!-- fieldset permet d'assembler les elements de notre formulaire lorsqu'ils sont en lien -->
+            <legend>Nom et Prénom</legend>
+            <label for="nom">Nom</label>
+            <!-- label designe l'etiquette du champs.elle pertmet de definir et d'informer sur l'info attendue -->
+            <input type="text" id="nom" name="nom" placeholder="Votre nom de famille" required>
+            <!-- placeholder indication pour l'utilisateur et required pour rendre obligatoire le -->
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" name="prenom" maxlength="15" placeholder="Votre prénom">
+            <!-- maxlenght: nombre de caracteres maximum  -->
+
+        </fieldset>
+        <br>
+
+        <div>
+            <label for="dateDeNaissance">Date de naissance</label>
+            <input type="date" id="dateDeNaissance" name="prenom" placeholder="Votre date de naissance">
+            <!-- type date permet d'afficher un calendrier pour choisir une date -->
+        </div>
+        <br>
+        <div>
+
+            <label for="age">Âge</label>
+            <input type="number" id="age" name="age" min="18" max="100" placeholder="Votre âge">
+
+        </div>
+        <br>
+        <div>
+            <input type="radio" id="moins15" name="age" value="moins15">
+            <label for="moins15">Moins de 15 ans</label>
+
+
+        </div>
+
+        <div>
+            <input type="radio" id="medium15-25" name="age" value="medium15-25" checked>
+            <label for="medium15-25">Entre 15 et 25 ans</label>
+
+
+        </div>
+        <div>
+            <input type="radio" id="medium25-40" name="age" value="medium25-40">
+            <label for="medium25-40">Entre 25 et 40 ans</label>
+
+
+        </div>
+        <div>
+            <input type="radio" id="plus40" name="age" value="plus40">
+            <label for="plus40">Plus de 40 ans</label>
+
+        </div>
+        <br>
+        <div>
+            <label for="pseudo">Pseudo</label>
+            <input type="text" id="pseudo" name="pseudo" placeholder="Trouvez-vous un pseudo" required>
+
+        </div>
+        <br>
+        <!-- div>label+input   raccourci -->
+        <div>
+            <label for="mdp">Mot de passe</label>
+            <input type="password" id="mdp" name="mdp" placeholder="Votre mot de passe">
+            <!-- type=password permet de masquer le mot de passe -->
+        </div>
+        <br>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Votre email">
+            <!-- type=email permet à l'utilisateur de saisir un email donc la valeur va être automatiquement validée et vérifiée -->
+        </div>
+        <br>
+        <div>
+            <label for="telephone">Téléphone</label>
+            <input type="tel" id="telephone" name="telephone" pattern="[0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}">
+            <!-- type=tel permet d'afficher les claviers chiffrés 
+            le pattern est une expression rationnelle à laquelle doit correspondree le texte saisi pour être valide-->
+        </div>
+        <br>
+        <div>
+            <label for="photo">Photographie</label>
+            <input type="file" id="photo" name="photo">
+        </div>
+        <br>
+
+        <div>
+
+
+            <label for="pays">Vous résidez en</label>
+            <select name="pays" id="pays">
+                <!-- indique le début et la fin de la liste déroulante -->
+                <optgroup label="Europe">
+                    <!-- grouper les options: separer les pays en fonction de leur continent-->
+                    <option value="france">France</option>
+                    <option value="espagne">Espagne</option>
+                    <option value="italie">Italie</option>
+                    <option value="royaume-Uni">Royaume-Uni</option>
+                </optgroup>
+                <optgroup label="Amérique">
+                    <option value="canada">Canada</option>
+                    <option value="etats-unis">Etats-Unis</option>
+                </optgroup>
+                <optgroup label="Asie">
+                    <option value="chine">Chine</option>
+                    <option value="japon">Japon</option>
+
+                </optgroup>
+
+            </select>
+        </div>
+        <br>
+
+        <!--  la balise select vient toujours a vec des options elle permet de créer un menu déroulant -->
+
+        <div>
+            <label for="question">Choisissez votre destination</label>
+            <div>
+                <input type="checkbox" name="question" value="chine" checked> En Chine?
+                <input type="checkbox" name="question" value="autriche">En Autriche?
+                <input type="checkbox" name="question" value="mars">Ou sur Mars?
+
+                <!-- checkbox  cases à cocher : toutes les cases peuvent être cochées -->
+            </div>
+        </div>
+        <br>
+
+        <div>
+            <div>
+
+                <label for="commentaires">Avez vous une précision à apporter?</label>
+            </div>
+            <textarea name="commentaires" id="commentaires" cols="50" rows="10"></textarea>
+            <!-- textarea zone de texte multi-lignes 
+            rows:nombre de lignes
+            cols:nombre de rangées-->
+        </div>
+        <br>
+
+
+
+        <!-- pour envoyer le formulaire -->
+        <input type="submit" name="inscription" value="S'inscrire">
+        <!-- pour valider le formulaire / remise à zero -->
+
+        <input type="reset" name="annuler" value="Effacer">
+
+        <!-- attribut disabled pour désactiver un élément -->
+        <input type="button" value="bouton inactif" disabled>
+
+
+
+    </form>
+
+</body>
+
+</html>
